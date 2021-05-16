@@ -15,7 +15,12 @@ public class StudentService {
         return studentRepository.findAll();
     }
 
-    public void addStudent(Student student) {
+    public void addStudent(Student student) throws Exception {
+        String email=student.getEmail();
+        int countExist= studentRepository.selectExistEmail(email);
+        if(countExist>0){
+            throw new Exception("Email Already Exist");
+        }
         studentRepository.save(student);
     }
 

@@ -23,6 +23,10 @@ public class StudentController {
     }
     @PostMapping
     public  void addStudent(@Valid @RequestBody Student student){
-        studentService.addStudent(student);
+        try {
+            studentService.addStudent(student);
+        }catch (Exception e){
+
+        }
     }
 }
