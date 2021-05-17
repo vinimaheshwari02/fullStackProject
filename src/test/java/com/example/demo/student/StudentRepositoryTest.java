@@ -21,7 +21,7 @@ class StudentRepositoryTest {
     @Test
     void itShouldCheckEmail() {
         //given
-        String email="vinimaheshwari02@gmail.com";
+        String email="vinimaheshwari01@gmail.com";
         Student student=new Student(
                 "Vini",
                 email,
